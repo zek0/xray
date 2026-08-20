@@ -1,0 +1,237 @@
+{
+ "log": {
+  "level": "info",
+  "timestamp": true
+ },
+ "dns": {
+  "servers": [
+   {
+    "tag": "dns-remote",
+    "address": "https://1.1.1.1/dns-query",
+    "address_resolver": "dns-direct"
+   },
+   {
+    "tag": "dns-direct",
+    "address": "1.1.1.1",
+    "detour": "direct"
+   }
+  ],
+  "rules": [
+   {
+    "outbound": "any",
+    "server": "dns-direct"
+   }
+  ]
+ },
+ "inbounds": [
+  {
+   "type": "socks",
+   "tag": "socks-in",
+   "listen": "0.0.0.0",
+   "listen_port": 1080,
+   "users": [
+    {
+     "user": "mikrotik",
+     "password": "xrayzed"
+    }
+   ]
+  }
+ ],
+ "outbounds": [
+  {
+   "type": "shadowsocks",
+   "tag": "srv-1",
+   "server": "38.180.92.242",
+   "server_port": 32245,
+   "method": "chacha20-ietf-poly1305",
+   "password": "pFNN9jKe8jwD"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-2",
+   "server": "130.162.34.180",
+   "server_port": 59924,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "lwWy6pzHMkI9wSRqa0W6BffrvpBMhfk3Az8mex0Uf7k="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-3",
+   "server": "129.151.65.11",
+   "server_port": 61312,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "9UMwtuEIWbCj7f9y8bx+o3CumyaG15feQ3VbyjaD3nQ="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-4",
+   "server": "82.38.31.155",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-5",
+   "server": "45.8.158.176",
+   "server_port": 10801,
+   "method": "aes-256-gcm",
+   "password": "1eadd4e4a37b6601"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-6",
+   "server": "82.38.31.57",
+   "server_port": 443,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-7",
+   "server": "82.38.31.149",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-8",
+   "server": "82.38.31.162",
+   "server_port": 443,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-9",
+   "server": "129.151.80.73",
+   "server_port": 61312,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "ryZz0qsI8llQKuhaJ02nbzalvk3ODhYCheJVffEB/XI="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-10",
+   "server": "108.181.121.226",
+   "server_port": 8388,
+   "method": "chacha20-ietf-poly1305",
+   "password": "WSyL4XTwNsdv"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-11",
+   "server": "158.173.20.208",
+   "server_port": 443,
+   "method": "aes-128-gcm",
+   "password": "shadowsocks"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-12",
+   "server": "82.38.31.42",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-13",
+   "server": "130.61.176.82",
+   "server_port": 59924,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "4/4O8tTGmtVVsD2fk70j39adoR7JWg8u114Kfy15IAw="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-14",
+   "server": "141.144.192.7",
+   "server_port": 45819,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "wVBWzY/eiDFBHGbshp5iuKUjL8OZsp++y8WAZtVHPvk="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-15",
+   "server": "82.38.31.15",
+   "server_port": 443,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-16",
+   "server": "82.38.31.7",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-17",
+   "server": "82.38.31.174",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-18",
+   "server": "144.24.225.94",
+   "server_port": 61312,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "+KGg1IPCmwou/Tbox35CD4DDdNYoAFN+ywjSch2F6LE="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-19",
+   "server": "129.151.89.37",
+   "server_port": 61312,
+   "method": "2022-blake3-chacha20-poly1305",
+   "password": "AYhW0WCXnkWSVLU1TWzGkAAutfAlRaf3PPe++vWpKV4="
+  },
+  {
+   "type": "shadowsocks",
+   "tag": "srv-20",
+   "server": "82.38.31.2",
+   "server_port": 8080,
+   "method": "chacha20-ietf-poly1305",
+   "password": "oZIoA69Q8yhcQV8ka3Pa3A"
+  },
+  {
+   "type": "urltest",
+   "tag": "vpn",
+   "outbounds": [
+    "srv-1",
+    "srv-2",
+    "srv-3",
+    "srv-4",
+    "srv-5",
+    "srv-6",
+    "srv-7",
+    "srv-8",
+    "srv-9",
+    "srv-10",
+    "srv-11",
+    "srv-12",
+    "srv-13",
+    "srv-14",
+    "srv-15",
+    "srv-16",
+    "srv-17",
+    "srv-18",
+    "srv-19",
+    "srv-20"
+   ],
+   "url": "https://www.gstatic.com/generate_204",
+   "interval": "1m",
+   "tolerance": 100,
+   "idle_timeout": "10m",
+   "interrupt_exist_connections": true
+  }
+ ],
+ "route": {
+  "final": "vpn",
+  "auto_detect_interface": true
+ }
+}
